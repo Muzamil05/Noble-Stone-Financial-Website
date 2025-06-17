@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" type="favicon" href="Assets/logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--navbar-->
+    <header>
+        <nav>
+            <ul class="nav">
+                <a href="index.html"><img src="Assets/logo.png" alt="logo" id="logo"></a>
+                <img src="Assets/Hamburger-menu.png" alt="Hamburger Menu" id="Hamburger-menu" class="Hamburger-menu">
+                <img src="Assets/Cross.png" alt="menu exit" id="Hamburger-exit" class="Hamburger-exit">
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="about us.html">About us</a></li>
+                <li><a class="nav-a" href="Mortgage Calculator.html">Mortgage Calculator</a></li>
+                <li><a class="nav-a" href="Services.html">Services</a></li>
+                <li><a class="nav-a" href="Contact Us.html">Contact us</a></li>
+                <li><a class="nav-a" href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Mobile Hamburger Menu Javascript-->
+    <script>
+        HamburgerMenu = document.getElementById("Hamburger-menu");
+        HamburgerExit = document.getElementById("Hamburger-exit");
+        nav_a = document.getElementsByClassName("nav-a");
+
+        function HamburgerVisibility() {
+            if (window.innerWidth > 1010)  { //Show the navbar links when the window is resized again to the desktop view
+                HamburgerMenu.style.display = "none";
+                HamburgerExit.style.display = "none";
+                nav_a[0].style.display = "block";
+                nav_a[1].style.display = "block";
+                nav_a[2].style.display = "block";
+                nav_a[3].style.display = "block";
+                nav_a[4].style.display = "block";
+                nav_a[5].style.display = "block";
+            }else { //Show the hamburger menu when the window is resized again
+                HamburgerMenu.style.display = "none";
+                HamburgerExit.style.display = "block";
+            }
+        }
+        HamburgerVisibility();
+        HamburgerMenu.addEventListener("click", function () { //Display the navbar when the user clicks the hamburger menu icon
+            HamburgerMenu.style.display = "none"; //Hide the hamburger menu icon
+            HamburgerExit.style.display = "block"; //Display the exit icon
+            nav_a[0].style.display = "block"; //Display the navbar links
+            nav_a[1].style.display = "block";
+            nav_a[2].style.display = "block";
+            nav_a[3].style.display = "block";
+            nav_a[4].style.display = "block";
+            nav_a[5].style.display = "block";
+        });
+        HamburgerExit.addEventListener("click", function () { //Hide the navbar when the user clicks the exit icon
+            HamburgerMenu.style.display = "block"; //Display the hamburger menu icon
+            HamburgerExit.style.display = "none"; //Hide the exit icon
+            nav_a[0].style.display = "none"; //Hide the navbar links
+            nav_a[1].style.display = "none";
+            nav_a[2].style.display = "none";
+            nav_a[3].style.display = "none";
+            nav_a[4].style.display = "none";
+            nav_a[5].style.display = "none";
+        });
+        window.addEventListener("resize", HamburgerVisibility); //resize the window to show the mobile navbar
+    </script>
+
+    <!--Hero Section-->
+    <section class="Hero">
+        <div class="background-container">
+            <div class="Heading-container">
+                <h1>Welcome to Noble Stone Financial</h1>
+                <h2>Where financial goals become achievements</h2>
+            </div>
+            <div class="Slideshow-container">
+                <div class="Slideshow">
+                    <img src="Assets/pexels-mikhail-nilov-6969755.jpg" alt="hero image" class="hero-image"> <!--Copyright free image from Pexels: Source: https://www.pexels.com/photo/a-woman-using-her-credit-card-online-6969755/-->
+                </div>
+                <div class="Slideshow">
+                    <img src="Assets/pexels-kampus-8353790.jpg" alt="hero image" class="hero-image"> <!--Copyright free image from Pexels: Source: https://www.pexels.com/photo/men-working-at-the-office-8353790/-->
+                </div>
+                <div class="Slideshow">
+                    <img src="Assets/pexels-photo-2880897.jpeg" alt="hero image" class="hero-image"> <!--Copyright free image from Pexels: Source: https://www.pexels.com/photo/photo-of-family-walking-on-park-2880897/-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Why choose us section-->
+    <main>
+        <div class="subsection">
+            <h3>Why Choose Us?</h3>
+            <div class="container-section">
+                <div class="sub-container">
+                    <img src="Assets/Customer Service icon.png" alt="Customer-icon" class="container-icon">
+                    <h4>Customer Service</h4>
+                    <p>Our team is dedicated to providing the best customer service to all our customers. We are here to help with any questions or concerns you may have.</p>
+                </div>
+                <div class="sub-container">
+                    <img src="Assets/lock icon.png" alt="Security-icon" class="container-icon">
+                    <h4>Security</h4>
+                    <p>Your data is our top priority. We have the latest security measures in place to ensure your information is protected, safe and secure.</p>
+                </div>
+                <div class="sub-container">
+                    <img src="Assets/Phone Icon.png" alt="Phone-Icon" class="container-icon">
+                    <h4>Services</h4>
+                    <p>Our services such as mobile banking,loans and savings accounts provide you with the tools needed to manage your finances.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Mortage Calculator Section-->
+        <section id="Mortage-Calculator-Section" class="Mortage Calculator Section">
+            <div class="Mortage-Calculator-Container">
+                <img src="Assets/calculator-7832583_1280.png" alt="Calculator Image" id="Calculator-Image"> <!--Copyright free image from Pixabay: Source: https://pixabay.com/vectors/calculator-device-electric-7832583/-->
+                <div class="Text-Heading">
+                    <h5>Try our Mortage Calculator</h5>
+                    <h6>Use our Mortage Calculator to find out how much you can borrow today.<h6>
+                    <button class="Mortage-Calculator-Button" id="Mortage-Calculator-Button">Try out here</button>
+                </div>
+            </div>
+        </section>
+        <!--Mortgage Calculator Button click event-->
+        <script>
+            document.getElementById("Mortage-Calculator-Button").addEventListener("click", function(){
+                window.location.href = "Pages/Mortgage Calculator.html";
+            });
+        </script>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <ul class="footer-nav">
+            <li><a class="footer-nav" href="index.html">Home</a></li>
+            <li><a class="footer-nav" href="about us.html">About us</a></li>
+            <li><a class="footer-nav" href="Mortgage Calculator.html">Mortgage Calculator</a></li>
+            <li><a class="footer-nav" href="Services.html">Services</a></li>
+            <li><a class="footer-nav" href="Contact Us.html">Contact Us</a></li>
+            <li><a class="footer-nav" href="FAQ.html">FAQ</a></li>
+        </ul>
+        <p>Copyright 2024 Noble Stone Financial. All rights reserved.<p>
+    </footer>
+</body>
+</html>
+
+<!--Hero Slideshow Javascript, taken from W3schools at: https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+<script>
+    var index = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("Slideshow");
+        for (i = 0; i < slides.length; i++) { //go through all of the slides
+            slides[i].style.display = "none"; //Hide the sides that are not in use
+        }
+        index++; 
+        if (index > slides.length) {index = 1} //Reset the index to 1 to go through the slides again
+        slides[index-1].style.display = "block"; //Display the slide
+        setTimeout(showSlides, 3000); //Change the slide every 3 seconds
+    }
+</script>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="icon" type="favicon" href="Assets/Logo.png">
+    <link rel="stylesheet" href="Services.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!--JQuery-->
+</head>
+
+<body>
+    <!--navbar-->
+    <header>
+        <nav>
+            <ul class="nav">
+                <a href="index.html"><img src="Assets/logo.png" alt="logo" id="logo"></a>
+                <img src="Assets/Hamburger-menu.png" alt="Hamburger Menu" id="Hamburger-menu" class="Hamburger-menu">
+                <img src="Assets/Cross.png" alt="menu exit" id="Hamburger-exit" class="Hamburger-exit">
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="about us.html">About us</a></li>
+                <li><a class="nav-a" href="Mortgage Calculator.html">Mortgage Calculator</a></li>
+                <li><a class="nav-a" href="Services.html">Services</a></li>
+                <li><a class="nav-a" href="Contact Us.html">Contact us</a></li>
+                <li><a class="nav-a" href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Mobile Hamburger Menu Javascript-->
+    <script>
+        HamburgerMenu = document.getElementById("Hamburger-menu");
+        HamburgerExit = document.getElementById("Hamburger-exit");
+        nav_a = document.getElementsByClassName("nav-a");
+
+        function HamburgerVisibility() {
+            if (window.innerWidth > 1010)  {
+                HamburgerMenu.style.display = "none";
+                HamburgerExit.style.display = "none";
+                nav_a[0].style.display = "block";
+                nav_a[1].style.display = "block";
+                nav_a[2].style.display = "block";
+                nav_a[3].style.display = "block";
+                nav_a[4].style.display = "block";
+                nav_a[5].style.display = "block";
+            }else { 
+                HamburgerMenu.style.display = "none";
+                HamburgerExit.style.display = "block";
+            }
+        }
+        HamburgerVisibility();
+        HamburgerMenu.addEventListener("click", function () {
+            HamburgerMenu.style.display = "none";
+            HamburgerExit.style.display = "block";
+            nav_a[0].style.display = "block";
+            nav_a[1].style.display = "block";
+            nav_a[2].style.display = "block";
+            nav_a[3].style.display = "block";
+            nav_a[4].style.display = "block";
+            nav_a[5].style.display = "block";
+        });
+        HamburgerExit.addEventListener("click", function () {
+            HamburgerMenu.style.display = "block";
+            HamburgerExit.style.display = "none";
+            nav_a[0].style.display = "none";
+            nav_a[1].style.display = "none";
+            nav_a[2].style.display = "none";
+            nav_a[3].style.display = "none";
+            nav_a[4].style.display = "none";
+            nav_a[5].style.display = "none";
+        });
+        window.addEventListener("resize", HamburgerVisibility);
+    </script>
+
+    <main>
+        <h1>Services</h1>
+        <div class="Services-Container">
+            <div class="Service-row-1">
+                <div class="Service" id="Online-Banking">
+                    <img src="Assets/Phone Icon.png" alt="Phone Icon" class="icon">
+                    <h2>Online and Mobile Banking</h2>
+                    <p>Stay connected to your finances with our comprehensive online and mobile banking platforms. Easily check your balances, transfer funds, pay bills, and monitor transactions with a user-friendly interface, all backed by top-notch security. Banking has never been more accessible.Available 24/7 from your computer or mobile device.</p>
+                </div>
+                <div class="Service" id="Loans">
+                    <img src="Assets/Money.png" alt="money Icon" class="icon">
+                    <h2>Loans</h2>
+                    <p>Secure your future with our range of savings accounts, designed to fit your financial goals. Whether you’re saving for a rainy day, a major purchase, or your long-term plans, our accounts offer competitive interest rates, easy access to funds, and tools to help you stay on track.</p>
+                </div>
+            </div>
+            <div class="Service-row-2">
+                <div class="Service" id="Savings">
+                    <img src="Assets/Piggy Bank.png" alt="Piggy Bank" class="icon">
+                    <h2>Savings accounts</h2>
+                    <p>Discover our flexible loan solutions, tailored to your unique needs. From personal and auto loans to home financing, we provide competitive rates and terms that fit your budget. Our dedicated team will guide you through every step, ensuring a smooth and hassle-free process.</p>
+                </div>
+                <div class="Service" id="Investments">
+                    <img src="Assets/Investing.png" alt="Investment Icon" class="icon">
+                    <h2>Investments</h2>
+                    <p>Grow your wealth with confidence through our diverse investment options. We offer a variety of investment services, including stocks, bonds, mutual funds, and retirement accounts. Our expert advisors are here to help you create a personalized investment strategy, aligning with your risk tolerance and long-term financial goals.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <ul class="footer-nav">
+            <li><a class="footer-nav" href="index.html">Home</a></li>
+            <li><a class="footer-nav" href="about us.html">About us</a></li>
+            <li><a class="footer-nav" href="Mortgage Calculator.html">Mortgage Calculator</a></li>
+            <li><a class="footer-nav" href="Services.html">Services</a></li>
+            <li><a class="footer-nav" href="Contact Us.html">Contact Us</a></li>
+            <li><a class="footer-nav" href="FAQ.html">FAQ</a></li>
+        </ul>
+        <p>Copyright 2024 Noble Stone Financial. All rights reserved.<p>
+    </footer>
+</body>
+
+<!--Service container JQuery animations, taken from W3Schools at: https://www.w3schools.com/jquery/jquery_hide_show.asp-->
+<script>
+    $("#Online-Banking").click(function(){ //Click on the specific service
+        $(this).find("p").slideToggle(2000); //Toggle the paragraph to show and hide and animate it for 2 seconds when the user clicks the container
+    });
+
+    $("#Loans").click(function(){
+        $(this).find("p").slideToggle(2000);
+    });
+
+    $("#Savings").click(function(){
+        $(this).find("p").slideToggle(2000);
+    });
+
+    $("#Investments").click(function(){
+        $(this).find("p").slideToggle(2000);
+    });
+</script>

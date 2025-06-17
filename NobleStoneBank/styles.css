@@ -1,0 +1,361 @@
+/*Header styling */
+header {
+    overflow: hidden;
+}
+header ul, li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1;
+} 
+header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #536972;
+}
+.nav-a {
+    color: #252424;
+    text-decoration: none;
+    font-family: 'PlayfairDisplay';
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+header a:hover {
+    text-decoration: underline;
+    color: white;
+}
+#logo {
+    width: 80px;
+    height: 80px;
+}
+#logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.Hamburger-menu {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 50px;
+    cursor: pointer;
+    display: none;
+    padding-left: 94%;
+}
+.Hamburger-exit {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 50px;
+    cursor: pointer;
+    display: none;
+    padding-left: 94%;
+}
+
+/*Hero styling */
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'PlayfairDisplay';
+    color: #252424;
+
+}
+h2 {
+    font-family: 'Play Fair Display Italic';
+    text-align: center;
+    font-size: 25px;
+    color: #252424;
+}
+.Slideshow-container {
+    flex: 70%;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.hero-image {
+    width: 100%;
+    height: 100%;
+    margin-right: 10%;
+    border-radius: 7%;
+    box-shadow: grey 10px 10px 10px;
+    animation: fade 3s;
+}
+.background-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #E8E3D9;
+    gap: 20px;
+    padding: 110px;
+}
+body {
+    margin: 0;
+    background-color: #536972;
+}
+
+/*Why choose us section*/
+.subsection {
+    background-color: #A6B2B5;
+    padding: 50px;
+}
+h3 {
+    font-size: 60px;
+    text-align: center;
+    color: #252424;
+}
+.container-section {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 50px;
+    padding-bottom: 100px;
+    gap: 50px;
+}
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    text-wrap: wrap;
+    padding: 20px;
+    border-radius: 20%;
+    box-sizing: border-box;
+    min-height: 100px;
+}
+.container-icon {
+    width: 40%;
+}
+h4 {
+    font-size: 30px;
+    font-family: 'PlayfairDisplay';
+    color: #252424;
+}
+p {
+    font-size: 20px;
+    font-family: 'Host Grotesk';
+    color: #252424;
+}
+
+/*Mortgage Calculator section*/
+h5 {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'PlayfairDisplay';
+    color: #252424;
+}
+h6 {
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Host Grotesk';
+    font-weight: 500;
+    color: #252424;
+}
+#Mortage-Calculator-Section
+{
+    background-color: #E8E3D9;
+    overflow: hidden;
+    
+}
+.Mortage-Calculator-Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A6B2B5;
+    padding: 50px;
+    border-radius: 3%;
+    width: 60%;
+    margin-left: 15%;
+    padding: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+#Calculator-Image {
+    width: 35%;
+    height: 35%;
+    padding-right: 50px;
+}
+.Mortage-Calculator-Button {
+    background-color: #94A187;
+    padding: 15px;
+    border-radius: 20px;
+    border: solid;
+    border-color: #29524A;
+    border-width: 5px;
+    font-size: 30px;
+    font-family: 'PlayfairDisplay';;
+    color: #252424;
+    cursor: pointer;
+}
+.Mortage-Calculator-Button:hover {
+    background-color: #29524A;
+}
+
+/*Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #536972;
+}
+.footer-nav {
+    text-decoration: none;
+    font-size: 25px;
+    color: #252424;
+}
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+footer p {
+    font-size: 20px;
+    font-family: 'Host Grotesk';
+
+}
+footer ul, li {
+    padding: 15px;
+}
+
+/*Custom fonts */
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('Assets/PlayfairDisplay-Bold.ttf');
+}
+@font-face {
+    font-family: 'Play Fair Display Italic';
+    src: url('Assets/PlayfairDisplay-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('Assets/HostGrotesk-VariableFont_wght.ttf');
+}
+
+/*Responsive CSS */
+@media screen and (max-width: 1050px) {
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .nav-a {
+        display: none;
+    }
+    .Hamburger-menu {
+        display: block;
+    }
+    header ul, header li {
+        display: inline;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    h3 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 15px;
+    }
+    .hero-image {
+        width: 120%;
+        height: 120%;
+    }
+    h5 {
+        font-size: 30px;
+    }
+    h6 {
+        font-size: 20px;
+    }
+    .Mortage-Calculator-Button {
+        font-size: 20px;
+    }
+    .Hamburger-menu {
+        padding-left: 93%;
+    }
+    .Hamburger-exit {
+        padding-left: 93%;
+    }
+}
+
+/*Mobile CSS*/
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 20px;
+        padding-bottom: 20px
+    }
+    .hero-image {
+        width: 100%;
+        height: 100%;
+    }
+    .background-container {
+        flex-direction: column;
+    }
+    .container-section {
+        flex-direction: column;
+    }
+    .Mortage-Calculator-Container {
+        flex-direction: column;
+    }
+    h1,h2 {
+        margin-right: 0%;
+    }
+    #Calculator-Image {
+        width: 50%;
+        height: 50%;
+        padding-right: 0px;
+    }
+    h3 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 20px;
+    }
+    .Hamburger-menu {
+        padding-left: 90%;
+    }
+    .Hamburger-exit {
+        padding-left: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    .hero-image {
+        width: 100%;
+    }
+    .Hamburger-menu {
+        padding-left: 88%;
+    }
+    .Hamburger-exit {
+        padding-left: 88%;
+    }
+}

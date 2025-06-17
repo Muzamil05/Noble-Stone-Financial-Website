@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="icon" type="favicon" href="Assets/logo.png">
+    <link rel="stylesheet" href="about us.css">
+</head>
+
+<body>
+    <!--navbar-->
+    <header>
+        <nav>
+            <ul class="nav">
+                <a href="index.html"><img src="Assets/logo.png" alt="logo" id="logo"></a>
+                <img src="Assets/Hamburger-menu.png" alt="Hamburger Menu" id="Hamburger-menu" class="Hamburger-menu">
+                <img src="Assets/Cross.png" alt="menu exit" id="Hamburger-exit" class="Hamburger-exit">
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="about us.html">About us</a></li>
+                <li><a class="nav-a" href="Mortgage Calculator.html">Mortgage Calculator</a></li>
+                <li><a class="nav-a" href="Services.html">Services</a></li>
+                <li><a class="nav-a" href="Contact Us.html">Contact us</a></li>
+                <li><a class="nav-a" href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Mobile Hamburger Menu Javascript-->
+    <script>
+        HamburgerMenu = document.getElementById("Hamburger-menu");
+        HamburgerExit = document.getElementById("Hamburger-exit");
+        nav_a = document.getElementsByClassName("nav-a");
+
+        function HamburgerVisibility() {
+            if (window.innerWidth > 1010)  {
+                HamburgerMenu.style.display = "none";
+                HamburgerExit.style.display = "none";
+                nav_a[0].style.display = "block";
+                nav_a[1].style.display = "block";
+                nav_a[2].style.display = "block";
+                nav_a[3].style.display = "block";
+                nav_a[4].style.display = "block";
+                nav_a[5].style.display = "block";
+            }else { 
+                HamburgerMenu.style.display = "none";
+                HamburgerExit.style.display = "block";
+            }
+        }
+        HamburgerVisibility();
+        HamburgerMenu.addEventListener("click", function () {
+            HamburgerMenu.style.display = "none";
+            HamburgerExit.style.display = "block";
+            nav_a[0].style.display = "block";
+            nav_a[1].style.display = "block";
+            nav_a[2].style.display = "block";
+            nav_a[3].style.display = "block";
+            nav_a[4].style.display = "block";
+            nav_a[5].style.display = "block";
+        });
+        HamburgerExit.addEventListener("click", function () {
+            HamburgerMenu.style.display = "block";
+            HamburgerExit.style.display = "none";
+            nav_a[0].style.display = "none";
+            nav_a[1].style.display = "none";
+            nav_a[2].style.display = "none";
+            nav_a[3].style.display = "none";
+            nav_a[4].style.display = "none";
+            nav_a[5].style.display = "none";
+        });
+        window.addEventListener("resize", HamburgerVisibility);
+    </script>
+    
+    <!--About us section-->
+    <section id="about-us-section">
+        <div class="about-us-container">
+            <div class="about-us">
+                <h1><strong>About us</strong></h1>
+                <p>Welcome to Noble Stone Financial, where your financial goals are our top priority. We are a trusted banking institution committed to providing innovative, secure, and tailored financial solutions for individuals, families, and businesses.
+                <br>
+                <br>
+                At Noble Stone Financial, our mission is to empower our clients to achieve financial success. We believe that a strong financial foundation is built on trust, transparency, and personalized service. That’s why we are dedicated to offering a wide range of banking and investment products, all designed to meet your unique needs and help you grow your wealth with confidence.
+                </p>
+                <img src="Assets/pexels-jopwell-2422294.jpg" alt="Teamwork" id="Teamwork-Image"> <!--Copyright free image from Pexels: Source: https://www.pexels.com/photo/group-of-people-sitting-inside-room-2422294/-->
+                <h2>Our Values</h2>
+                <p>At Noble Stone Financial, we are guided by a set of core values that define who we are and how we do business. These values are the foundation of our success and the reason why our clients trust us to help them achieve their financial goals. We strive for:
+                </p>
+                <ol>
+                    <li>-Integrity</li>
+                    <li>-Excellence</li>
+                    <li>-Trust</li>
+                    <li>-Innovation</li>
+                    <li>-Community</li>
+                </ol>
+                <p>At Noble Stone Financial, we understand that each financial journey is unique. That’s why we offer a full spectrum of services, from personal banking and business solutions to investment advice and wealth management. Our goal is to help you navigate every stage of your financial journey, providing the support and expertise you need to turn financial goals into achievements.
+                <br>
+                <br>
+                Whether you’re saving for the future, investing in your dreams, or growing your business, Noble Stone Financial is here to help you every step of the way.
+                <br>
+                <br>
+                <strong>Join us and experience a better way to bank.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <ul class="footer-nav">
+            <li><a class="footer-nav" href="index.html">Home</a></li>
+            <li><a class="footer-nav" href="about us.html">About us</a></li>
+            <li><a class="footer-nav" href="Mortgage Calculator.html">Mortgage Calculator</a></li>
+            <li><a class="footer-nav" href="Services.html">Services</a></li>
+            <li><a class="footer-nav" href="Contact Us.html">Contact Us</a></li>
+            <li><a class="footer-nav" href="FAQ.html">FAQ</a></li>
+        </ul>
+        <p>Copyright 2024 Noble Stone Financial. All rights reserved.<p>
+    </footer>
+</body>

@@ -1,0 +1,183 @@
+/*Header styling */
+header {
+    overflow: hidden;
+}
+header ul, li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1;
+    margin-left: 1;
+} 
+header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #536972;
+}
+.nav-a {
+    color: #252424;
+    text-decoration: none;
+    font-family: 'PlayfairDisplay';
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+header a:hover {
+    text-decoration: underline;
+    color: white;
+}
+#logo {
+    width: 80px;
+    height: 80px;
+}
+#logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.Hamburger-menu {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 50px;
+    cursor: pointer;
+    display: none;
+    padding-left: 94%;
+}
+.Hamburger-exit {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 50px;
+    cursor: pointer;
+    display: none;
+    padding-left: 94%;
+}
+body {
+    margin: 0;
+    background-color: #536972;
+}
+
+/*About us styling */
+#about-us-section {
+    padding: 80px;
+    background-color: #E8E3D9;
+}
+.about-us-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 50px;
+}
+h1 {
+    font-size: 60px;
+    font-family: 'PlayfairDisplay';
+    text-align: center;
+    color: #252424;
+}
+h2 {
+    font-family: 'PlayFairDisplay';
+    font-size: 50px;
+    text-align: center;
+    color: #252424;
+}
+p {
+    font-family: 'Host Grotesk';
+    font-size: 20px;
+    color: #252424;
+    padding: 30px;
+}
+li,ol {
+    font-family: 'Host Grotesk';
+    font-size: 25px;
+    color: #252424;
+    font-weight: bold;
+    
+}
+#Teamwork-Image {
+    width: 70%;
+    height: 70%;
+    border-radius: 7%;
+    box-shadow: grey 10px 10px 10px;
+    margin-left: 15%;
+}
+
+/*Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #536972;
+}
+.footer-nav {
+    text-decoration: none;
+    font-size: 25px;
+    color: #252424;
+    font-family: 'PlayfairDisplay';
+}
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+footer p {
+    font-size: 20px;
+    font-family: 'Host Grotesk';
+}
+footer ul, footer li {
+    padding: 15px;
+}
+
+/*Custom fonts */
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('Assets/PlayfairDisplay-Bold.ttf');
+}
+@font-face {
+    font-family: 'Play Fair Display Italic';
+    src: url('Assets/PlayfairDisplay-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('Assets/HostGrotesk-VariableFont_wght.ttf');
+}
+
+/*Responsive CSS */
+
+@media screen and (max-width: 1010px) {
+    .nav-a {
+        display: none;
+    }
+    .Hamburger-menu {
+        display: block;
+    }
+    header ul, header li {
+        display: inline;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .Hamburger-menu {
+        padding-left: 93%;
+    }
+    .Hamburger-exit {
+        padding-left: 93%;
+    }
+}
+
+/*Mobile CSS*/
+@media screen and (max-width: 768px) {
+    .Hamburger-menu {
+        padding-left: 90%;
+    }
+    .Hamburger-exit {
+        padding-left: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Hamburger-menu {
+        padding-left: 88%;
+    }
+    .Hamburger-exit {
+        padding-left: 88%;
+    }
+}

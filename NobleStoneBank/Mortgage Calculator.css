@@ -1,0 +1,236 @@
+/*Header styling */
+header {
+    overflow: hidden;
+}
+header ul, li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1;
+} 
+header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #536972;
+}
+.nav-a {
+    color: #252424;
+    text-decoration: none;
+    font-family: 'PlayfairDisplay';
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+header a:hover {
+    text-decoration: underline;
+    color: white;
+}
+#logo {
+    width: 80px;
+    height: 80px;
+}
+#logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.Hamburger-menu {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 50px;
+    cursor: pointer;
+    display: none;
+    padding-left: 94%;
+}
+.Hamburger-exit {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 50px;
+    cursor: pointer;
+    display: none;
+    padding-left: 94%;
+}
+body {
+    margin: 0;
+    background-color: #536972;
+}
+
+/*Mortgage Calculator Styling*/
+main {
+    padding-top: 30px;
+    background-color: #E8E3D9;
+}
+#Calculator-Section {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    padding-left: 80px;
+    padding-right: 20%;
+    margin-left: 20%;
+    border-radius: 7%;
+}
+form {
+    border-radius: 15%;
+}
+h1 {
+    font-family: 'PlayfairDisplay';
+    font-size: 40px;
+    color: #252424;
+    text-align: center;
+}
+h2 {
+    font-family: 'PlayFairDisplay';
+    font-size: 30px;
+    color: #252424;
+    text-align: left;
+    padding-left: 10px;
+}
+p {
+    font-family: 'Host Grotesk';
+    font-size: 20px;
+    color: #252424;
+    text-align: center;
+    padding-top: 0px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.Calculator-Form {
+    background-color: white;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 70px;
+    padding-top: 30px;
+    border-radius: 50px;
+}
+#Loan-amount{
+    width: 70%;
+    padding: 12px;
+    margin: 8px;
+    display: block;
+    border: 1px solid;
+    border-color: rgb(190, 190, 190);
+    border-radius: 10px;
+}
+#Loan-term {
+    width: 70%;
+    padding: 12px;
+    margin: 8px;
+    display: block;
+    border: 1px solid;
+    border-color: rgb(190, 190, 190);
+    border-radius: 10px;
+}
+#Monthly-Income {
+    width: 70%;
+    padding: 12px;
+    margin: 8px;
+    display: block;
+    border: 1px solid;
+    border-color: rgb(190, 190, 190);
+    border-radius: 10px;
+}
+#Calculate {
+    width: 27%;
+    background-color: #536972;
+    color: white;
+    padding: 14px;
+    margin-left: 35%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+#Calculate:hover {
+    background-color: #29524A;
+    cursor: pointer;
+}
+
+/*Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #536972;
+}
+.footer-nav {
+    text-decoration: none;
+    font-size: 25px;
+    color: #252424;
+}
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+footer p {
+    font-size: 20px;
+    font-family: 'Host Grotesk';
+
+}
+footer ul, li {
+    padding: 15px;
+}
+
+/*Custom fonts */
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('Assets/PlayfairDisplay-Bold.ttf');
+}
+@font-face {
+    font-family: 'Play Fair Display Italic';
+    src: url('Assets/PlayfairDisplay-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('Assets/HostGrotesk-VariableFont_wght.ttf');
+}
+
+@media screen and (max-width: 1010px) {
+    .nav-a {
+        display: none;
+    }
+    .Hamburger-menu {
+        display: block;
+    }
+    header ul, header li {
+        display: inline;
+        text-align: center;
+    }
+    #Calculator-Section {
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    #Calculate {
+        margin-left: 30%;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .Hamburger-menu {
+        padding-left: 93%;
+    }
+    .Hamburger-exit {
+        padding-left: 93%;
+    }
+}
+
+/*Mobile CSS*/
+@media screen and (max-width: 768px) {
+    .Hamburger-menu {
+        padding-left: 90%;
+    }
+    .Hamburger-exit {
+        padding-left: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Hamburger-menu {
+        padding-left: 88%;
+    }
+    .Hamburger-exit {
+        padding-left: 88%;
+    }
+}

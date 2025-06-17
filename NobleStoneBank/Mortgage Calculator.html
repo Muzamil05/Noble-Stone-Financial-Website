@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="icon" type="favicon" href="Assets/Logo.png">
+    <link rel="stylesheet" href="Mortgage Calculator.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!--JQuery-->
+</head>
+
+<body>
+    <!--navbar-->
+    <header>
+        <nav>
+            <ul class="nav">
+                <a href="index.html"><img src="Assets/logo.png" alt="logo" id="logo"></a>
+                <img src="Assets/Hamburger-menu.png" alt="Hamburger Menu" id="Hamburger-menu" class="Hamburger-menu">
+                <img src="Assets/Cross.png" alt="menu exit" id="Hamburger-exit" class="Hamburger-exit">
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="about us.html">About us</a></li>
+                <li><a class="nav-a" href="Mortgage Calculator.html">Mortgage Calculator</a></li>
+                <li><a class="nav-a" href="Services.html">Services</a></li>
+                <li><a class="nav-a" href="Contact Us.html">Contact us</a></li>
+                <li><a class="nav-a" href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Mobile Hamburger Menu Javascript-->
+    <script>
+        HamburgerMenu = document.getElementById("Hamburger-menu");
+        HamburgerExit = document.getElementById("Hamburger-exit");
+        nav_a = document.getElementsByClassName("nav-a");
+
+        function HamburgerVisibility() {
+            if (window.innerWidth > 1010)  {
+                HamburgerMenu.style.display = "none";
+                HamburgerExit.style.display = "none";
+                nav_a[0].style.display = "block";
+                nav_a[1].style.display = "block";
+                nav_a[2].style.display = "block";
+                nav_a[3].style.display = "block";
+                nav_a[4].style.display = "block";
+                nav_a[5].style.display = "block";
+            }else { 
+                HamburgerMenu.style.display = "none";
+                HamburgerExit.style.display = "block";
+            }
+        }
+        HamburgerVisibility();
+        HamburgerMenu.addEventListener("click", function () {
+            HamburgerMenu.style.display = "none";
+            HamburgerExit.style.display = "block";
+            nav_a[0].style.display = "block";
+            nav_a[1].style.display = "block";
+            nav_a[2].style.display = "block";
+            nav_a[3].style.display = "block";
+            nav_a[4].style.display = "block";
+            nav_a[5].style.display = "block";
+        });
+        HamburgerExit.addEventListener("click", function () {
+            HamburgerMenu.style.display = "block";
+            HamburgerExit.style.display = "none";
+            nav_a[0].style.display = "none";
+            nav_a[1].style.display = "none";
+            nav_a[2].style.display = "none";
+            nav_a[3].style.display = "none";
+            nav_a[4].style.display = "none";
+            nav_a[5].style.display = "none";
+        });
+        window.addEventListener("resize", HamburgerVisibility);
+    </script>
+    
+    <main>
+        <h1>Mortgage Calculator</h1>
+        <p>To use the mortgage calculator, please enter the loan amount you have, the loan term (years) and your monthly income.</p>
+        <section id="Calculator-Section">
+            <div class="Calculator-Form">
+                <form>
+                    <h2>Loan amount</h2>
+                    <input type="number" id="Loan-amount" name="Loan-amount"required>
+                    <h2>Loan Term:</h2>
+                    <input type="number" id="Loan-term" name="Loan-term"required>
+                    <h2>Monthly Income:</h2>
+                    <input type="number" id="Monthly-Income" name="Monthly-Income"required>
+                    <button type="button" id="Calculate">Calculate</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <ul class="footer-nav">
+            <li><a class="footer-nav" href="index.html">Home</a></li>
+            <li><a class="footer-nav" href="about us.html">About us</a></li>
+            <li><a class="footer-nav" href="Mortgage Calculator.html">Mortgage Calculator</a></li>
+            <li><a class="footer-nav" href="Services.html">Services</a></li>
+            <li><a class="footer-nav" href="Contact Us.html">Contact Us</a></li>
+            <li><a class="footer-nav" href="FAQ.html">FAQ</a></li>
+        </ul>
+        <p>Copyright 2024 Noble Stone Financial. All rights reserved.<p>
+    </footer>
+
+    <!--Mortgage Calculator Calculations-->
+    <script src="Mortgage Calculator.js"></script>
+    
+</body>
